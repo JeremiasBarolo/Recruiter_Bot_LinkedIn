@@ -16,7 +16,7 @@
 ## Pasos a seguir 🛠 
 
 **Para tener en cuenta**✍🏼: 
--Mientras el programa este en marcha **no se podra usar el mouse******. 
+-Mientras el programa este en marcha **no se podra usar el mouse**. 
 -La tecla que apaga este programa es la **Q **, debera mantenerse apretada por un segundo
 -**El Bot tarda 2 segundos en ejecutarse**, tiempo suficiente para dejar listo el navegador para que trabaje el bot
 -El Bot debera de ser ejecutado **dentro de la pantalla donde esta el navegador elegido**
