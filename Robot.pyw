@@ -18,7 +18,9 @@ def Recruiter():
     Conectar = pag.locateOnScreen('Boton_conectar.png', confidence=0.8)
     Boton_Siguente = pag.locateOnScreen('Boton_Siguiente.png', confidence=0.8)
     Boton_Seguir = pag.locateOnScreen('Boton_Seguir.png', confidence=0.8)
-    No_Pasar = pag.locateOnScreen('No_Pasar.png', confidence=0.8)
+    Salir_No_Pasar = pag.locateOnScreen('Salir_No_Pasar.png', confidence=0.8)
+
+    
     
     while keyboard.is_pressed('q') == False:
         
@@ -31,20 +33,30 @@ def Recruiter():
         elif Conectar:
             Conectar = pag.locateOnScreen('Boton_conectar.png', confidence=0.8)
             pag.click(Conectar)
-            time.sleep(0.5)
+            time.sleep(1.5)
+            Boton_Enviar = pag.locateOnScreen('Boton_Enviar.png', confidence=0.8)
+            Salir_No_Pasar = pag.locateOnScreen('Salir_No_Pasar.png', confidence=0.8)
+            
 
-            if No_Pasar:
-                pag.click(200, 200)
+            if Boton_Enviar:    
+                pag.click(Boton_Enviar)
+                time.sleep(0.5)
                 pag.scroll(-170)
-                Conectar = pag.locateOnScreen('Boton_conectar.png', confidence=0.8)
+                time.sleep(0.5)
                 Recruiter()
-        
+                
             else:
-                Enviar()
-                time.sleep(0.5)
-                pag.scroll(-170)
-                time.sleep(0.5)
-                Recruiter()
+                try:
+                    for i in range(3):
+                        pag.moveTo(Salir_No_Pasar)
+                        pag.click()
+                        time.sleep(0.5)
+                        pag.scroll(-170)
+                        Conectar = pag.locateOnScreen('Boton_conectar.png', confidence=0.8)
+                except:
+                    Boton_Siguente = pag.locateOnScreen('Boton_Siguiente.png', confidence=0.8)
+                    pag.moveTo(Boton_Siguente)
+                    time.sleep(2)
         
 
         elif Boton_Siguente:
@@ -65,8 +77,8 @@ def Recruiter():
                 pag.moveTo(0,0)
                 break
         
-       
-            
+ 
+          
 #Invocamos el Programa
 Recruiter()
 
