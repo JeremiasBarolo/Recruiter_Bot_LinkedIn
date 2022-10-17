@@ -57,5 +57,6 @@ pip install pyautogui
 pip install keyboard
 
 
-
 🙌🏽  **¡Suerte en su busqueda laboral Developers!** 🙌🏽
+
+[![Recruiter Bot](GitHub "Recruiter Bot")](https://user-images.githubusercontent.com/114596118/196256689-6cc8be5d-e960-4b31-9735-d2b358ecc680.mp4 "Recruiter Bot")
