@@ -3,8 +3,11 @@
 ## Dependencias Necesarias 📋
 
 **Python** 🐍 : Lenguaje Empleado para la creacion del Bot
+
 **Pyautogui** 🤖 : Permite interactuar con la pagina de LinkedIn sin afectar al funcionamiento del explorador elegido
+
 **Keyboard** ⌨️ : Permite interactuar con el teclado, usado para sacar al usuario del bucle presionando **Q**
+
 **Brave o Chrome** 🌌: Navegadores Web usados en las Pruebas del Programa. (Opcional)
 
 ## Configuraciones 💻
