@@ -1,3 +1,4 @@
+import multiprocessing
 import pyautogui as pag
 import time
 import keyboard
@@ -7,18 +8,24 @@ time.sleep(2)
 
 pag.FAILSAFE=True
 
+Multiple_Choise = pag.locateOnScreen('multiple_choise.png', confidence=0.8)
+Other_Button = pag.locateOnScreen('other.png', confidence=0.8)
 
-def Enviar():
-    pag.click(x=1178,y=315)
 
 
-#print(pag.displayMousePosition())
+def Fun_conectar():
+    Conectar = pag.locateOnScreen('Boton_conectar.png', confidence=0.8)
+    pag.click(Conectar)
+    time.sleep(1.5)
+    Boton_Enviar = pag.locateOnScreen('Boton_Enviar.png', confidence=0.8)
+    Salir_No_Pasar = pag.locateOnScreen('Salir_No_Pasar.png', confidence=0.8)
 
 def Recruiter():
     Conectar = pag.locateOnScreen('Boton_conectar.png', confidence=0.8)
     Boton_Siguente = pag.locateOnScreen('Boton_Siguiente.png', confidence=0.8)
     Boton_Seguir = pag.locateOnScreen('Boton_Seguir.png', confidence=0.8)
     Salir_No_Pasar = pag.locateOnScreen('Salir_No_Pasar.png', confidence=0.8)
+    
 
     
     
@@ -31,10 +38,9 @@ def Recruiter():
             Recruiter()
         
         elif Conectar:
-            Conectar = pag.locateOnScreen('Boton_conectar.png', confidence=0.8)
-            pag.click(Conectar)
-            time.sleep(1.5)
+            Fun_conectar()
             Boton_Enviar = pag.locateOnScreen('Boton_Enviar.png', confidence=0.8)
+            Multiple_Choise = pag.locateOnScreen('multiple_choise.png', confidence=0.8)
             Salir_No_Pasar = pag.locateOnScreen('Salir_No_Pasar.png', confidence=0.8)
             
 
@@ -44,20 +50,31 @@ def Recruiter():
                 pag.scroll(-170)
                 time.sleep(0.5)
                 Recruiter()
-                
+            
+            elif Multiple_Choise:
+                Other_Button = pag.locateOnScreen('other.png', confidence=0.8)
+                pag.click(Other_Button)
+                time.sleep(0.1)
+                Inside_Conectar = pag.locateOnScreen('Inside_Conectar_Button.png')
+                pag.click(Inside_Conectar)
+                time.sleep(0.1)
+                Boton_Enviar = pag.locateOnScreen('Boton_Enviar.png', confidence=0.8)
+                pag.click(Boton_Enviar)
+                Recruiter()
+  
             else:
                 try:
-                    for i in range(3):
-                        pag.moveTo(Salir_No_Pasar)
-                        pag.click()
-                        time.sleep(0.5)
+                    for i in range(4):
+                        pag.click(Salir_No_Pasar)
                         pag.scroll(-170)
-                        Conectar = pag.locateOnScreen('Boton_conectar.png', confidence=0.8)
+                        Recruiter()
                 except:
+                    pag.scroll(-170)
                     Boton_Siguente = pag.locateOnScreen('Boton_Siguiente.png', confidence=0.8)
-                    pag.moveTo(Boton_Siguente)
-                    time.sleep(2)
-        
+                    pag.click(Boton_Siguente)
+
+
+
 
         elif Boton_Siguente:
             pag.click(Boton_Siguente)
@@ -83,7 +100,6 @@ def Recruiter():
 Recruiter()
 
 print('Terminado')
-
 
 
 
