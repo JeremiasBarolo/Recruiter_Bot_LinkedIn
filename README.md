@@ -50,7 +50,13 @@
 ## Instalar Dependencias Necesarias ⚙️
 
 
-Instalar Python (https://www.python.org/)
+Instalar Python 3.10.4 + (https://www.python.org/)(o Desde el VS code)
+
+Instalar pip
+
+Dentro del cmd:
+
+pip install time
 
 pip install pyautogui
 
