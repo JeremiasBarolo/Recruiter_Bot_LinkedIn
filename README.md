@@ -15,6 +15,8 @@
 **Resolucion**: 1920x1080.
 
 **Navegador**: Pantalla Completa, Zoom: 100%.
+
+**Sistema Operativo**: Windows 8/10/11.
             
 
 ## Para tener en cuenta ✍ :  
@@ -38,7 +40,7 @@
 
 **2**- Iniciaremos sesion dentro LinkedIn.
 
-**3**- Nos dirigiremos a https://www.linkedin.com/feed/.
+**3**- Nos dirigiremos a https://www.linkedin.com/feed/  
 
 **4**- Buscaremos el tipo de reclutador con el que deseemos conectar. (En mi caso **Recruiter it**).
 
@@ -50,17 +52,17 @@
 ## Instalar Dependencias Necesarias ⚙️
 
 
-Instalar Python 3.10.4 + (https://www.python.org/)(o Desde el VS code)
+Instalar Python 3.10.4 en adelante (https://www.python.org/downloads/ o Desde el VS code)
 
-Instalar pip
+- Dentro del cmd escribir:
 
-Dentro del cmd:
+'py get-pip.py' **(Instalacion de pip)**
 
-pip install time
+'pip install time' **(Modulo time)**
 
-pip install pyautogui
+'pip install pyautogui' **(Framework)**
 
-pip install keyboard
+'pip install keyboard' **(Modulo Keyboard)**
 
 
 🙌🏽  **¡Suerte en su busqueda laboral Developers!** 🙌🏽
