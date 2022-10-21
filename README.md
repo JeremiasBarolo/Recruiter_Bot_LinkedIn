@@ -28,7 +28,7 @@
 
 - **El Bot tarda 2 segundos en ejecutarse**, tiempo suficiente para dejar listo el navegador y dejar que trabaje el bot.
 
-- El Bot debera de ser ejecutado **dentro de la misma pantalla donde esta el navegador elegido**.
+- El Bot sera EJECUTADO **dentro de la pantalla principal del ordenador**.
 
 - Se recomienda tenerlo bajo supervision para estar atento ante cualquier inconveniente.
 
