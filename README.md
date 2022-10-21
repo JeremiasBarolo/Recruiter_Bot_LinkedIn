@@ -23,9 +23,9 @@
 
 -Para detener el Programa:
 
-  _Mientras el programa este en marcha **no se podra usar el mouse**. A menos que se quiera manualmente apagar el programa direccionando el cursor a la esquina superior derecha de la pantalla. (0,0)
+  _Mientras el programa este en marcha **no se podra usar el mouse**. A menos que se quiera manualmente apagar el programa direccionando el cursor a la esquina superior derecha de la pantalla rapidanmente y manteniendolo un segundo.(0,0)
 
-  _La tecla que apaga este programa es la **Q**, debera mantenerse apretada por un segundo.
+  _La tecla que apaga este programa es la **Q**, debera mantenerse apretada por un segundo o repetidas varias veces.
 
 - **El Bot tarda 2 segundos en ejecutarse**, tiempo suficiente para dejar listo el navegador y permitir que trabaje el bot.
 
