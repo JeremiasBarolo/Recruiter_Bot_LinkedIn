@@ -21,13 +21,8 @@ def Fun_conectar():
     Salir_No_Pasar = pag.locateOnScreen('assets/imgs/Salir_No_Pasar.png', confidence=0.8)
 
 #<======================================Funcion Main=====================================================>
-
+Parar = False
 def Recruiter():
-    
-    def Parar():
-        if keyboard.is_pressed('q'):
-            return True
-
     Conectar = pag.locateOnScreen('assets/imgs/Boton_conectar.png', confidence=0.8)
     Boton_Siguente = pag.locateOnScreen('assets/imgs/Boton_Siguiente.png', confidence=0.8)
     Boton_Seguir = pag.locateOnScreen('assets/imgs/Boton_Seguir.png', confidence=0.8)
@@ -38,7 +33,10 @@ def Recruiter():
     
     
     
-    while Parar() == False:
+    while keyboard.is_pressed('q') == False:
+
+        if keyboard.is_pressed('q') == True:
+            print('Freanado el programa')
         
         #Seguir
         if Boton_Seguir:
@@ -142,14 +140,14 @@ def Instrucciones(event):
         "https://github.com/JeremiasBarolo/Recruiter_Bot_LinkedIn")
     webbrowser.open_new_tab(instructions)
 
-def Minimizar_Ejecutar():
+def Ejecutar():
     l = msg.askyesno('Iniciando el Programa', 'Desea iniciar el Bot?')
     if l != False:
         Recruiter()
         print('Iniciando Programa...')
 
 def Detener_Programa():
-    pag.moveTo(0,0)
+    exit()
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path("assets/assets_tkinter")
@@ -230,14 +228,14 @@ button_instrucciones = Button(
     relief="flat"
 )
 button_instrucciones.place(
-    
     x=506.0,
-    y=214.0,
+    y=155.0,
     width=104.0,
-    height=39.0     
+    height=39.0 
 )
 button_instrucciones.bind('<Button-1>', Instrucciones)
-""" 
+
+""" Instrucciones ruta 1
     x=506.0,
     y=272.0,
     width=104.0,
@@ -261,7 +259,7 @@ button_OPCIONES.place(
     width=104.0,
     height=39.0
 )
-"""
+
 
 button_image_3 = PhotoImage(
     file=relative_to_assets("button_3.png"))
@@ -278,14 +276,14 @@ button_DETENER.place(
     width=104.0,
     height=39.0
 )
-
+"""
 button_image_4 = PhotoImage(
     file=relative_to_assets("button_4.png"))
 button_INICIAR = Button(
     image=button_image_4,
     borderwidth=0,
     highlightthickness=0,
-    command=Minimizar_Ejecutar,
+    command=Ejecutar,
     relief="flat"
 )
 
