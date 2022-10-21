@@ -28,7 +28,7 @@
 
 - **El Bot tarda 2 segundos en ejecutarse**, tiempo suficiente para dejar listo el navegador y dejar que trabaje el bot.
 
-- El Bot sera EJECUTADO **dentro de la pantalla principal del ordenador**.
+- El Bot sera ejecutado **dentro de la pantalla principal del ordenador**.
 
 - Se recomienda tenerlo bajo supervision para estar atento ante cualquier inconveniente.
 
@@ -44,7 +44,7 @@
 
 **4**- Buscaremos el tipo de reclutador con el que deseemos conectar. (En mi caso **Recruiter it**).
 
-**5**- Luego, ubicaremos el boton ** Mostrar todos los resultados**, y lo clickeamos.
+**5**- Luego, ubicaremos el boton **Mostrar todos los resultados**, y lo clickeamos.
 
 **6**- Cuando haya cargado la pagina, ejecutaremos el bot hasta que hayamos cumplido el cupo semanal de seguimientos.
 
