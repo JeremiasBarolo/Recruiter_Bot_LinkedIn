@@ -1,7 +1,7 @@
 import pyautogui as pag
 import time
 import keyboard
-from Mensaje import Mensaje
+from mensaje import Mensaje
 from pathlib import Path
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 from tkinter import messagebox as msg
