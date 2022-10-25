@@ -109,48 +109,6 @@ button_instrucciones.place(
 )
 button_instrucciones.bind('<Button-1>', Instrucciones)
 
-""" Instrucciones ruta 1
-    x=506.0,
-    y=272.0,
-    width=104.0,
-    height=40.0
-"""
-
-"""
-button_image_2 = PhotoImage(
-    file=relative_to_assets("button_2.png"))
-button_OPCIONES= Button(
-    image=button_image_2,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_2 clicked"),
-    relief="flat"
-)
-
-button_OPCIONES.place(
-    x=506.0,
-    y=214.0,
-    width=104.0,
-    height=39.0
-)
-
-
-button_image_3 = PhotoImage(
-    file=relative_to_assets("button_3.png"))
-button_DETENER = Button(
-    image=button_image_3,
-    borderwidth=0,
-    highlightthickness=0,
-    command=Detener_Programa,
-    relief="flat"
-)
-button_DETENER.place(
-    x=506.0,
-    y=155.0,
-    width=104.0,
-    height=39.0
-)
-"""
 button_image_4 = PhotoImage(
     file=relative_to_assets("button_4.png"))
 button_INICIAR = Button(

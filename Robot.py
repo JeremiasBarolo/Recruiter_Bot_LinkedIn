@@ -24,6 +24,54 @@ def Fun_conectar():
     time.sleep(0.5)
     Boton_Enviar = pag.locateOnScreen('assets/imgs/Boton_Enviar.png', confidence=0.8)
     Salir_No_Pasar = pag.locateOnScreen('assets/imgs/Salir_No_Pasar.png', confidence=0.8)
+    Multiple_Choise = pag.locateOnScreen('assets/imgs/multiple_choise.png', confidence=0.8)
+    
+                
+    #Enviar
+    if Boton_Enviar:
+        print('Enviado :D')  
+        pag.click(Boton_Enviar)
+        time.sleep(0.5)
+        Limite_Semanal = pag.locateOnScreen('assets/imgs/Limite_Semanal.png', confidence=0.8)
+
+        if Limite_Semanal:
+            print('Haz alcanzado el limite semanal de seguimientos ;)')
+            msg.showinfo('Terminado', 'Limite Semanal de Interacciones')
+            
+                            
+    else:
+        pag.scroll(-170)
+        time.sleep(1)
+
+    #Multiple Choise
+    if Multiple_Choise:
+        print('Resolviendo MultipleChoise...')  
+        Other_Button = pag.locateOnScreen('assets/imgs/other.png', confidence=0.8)
+        pag.click(Other_Button)
+        time.sleep(0.1)
+        Inside_Conectar = pag.locateOnScreen('assets/imgs/Inside_Conectar_Button.png')
+        pag.click(Inside_Conectar)
+        time.sleep(0.1)
+        Boton_Enviar = pag.locateOnScreen('assets/imgs/Boton_Enviar.png', confidence=0.8)
+        pag.click(Boton_Enviar)
+        Ejecutar_Script()
+        print('Resuleto :D')
+
+    else:
+        try:
+            for i in range(4):
+                print('Intentando cambiar de Boton...')
+                pag.click(Salir_No_Pasar)
+                pag.scroll(-170)
+
+                Ejecutar_Script()
+        except:
+            pag.scroll(-170)
+            Boton_Siguente = pag.locateOnScreen('assets/imgs/Boton_Siguiente.png', confidence=0.8)
+            pag.click(Boton_Siguente)
+            print('Cambiando de Pagina...')
+
+
 
 #<======================================Funcion Main=====================================================>
 def Recruiter():
@@ -32,10 +80,6 @@ def Recruiter():
     Boton_Seguir = pag.locateOnScreen('assets/imgs/Boton_Seguir.png', confidence=0.8)
     Salir_No_Pasar = pag.locateOnScreen('assets/imgs/Salir_No_Pasar.png', confidence=0.8)
     Boton_Mensaje = pag.locateOnScreen('assets/imgs/Boton_Mensaje.png', confidence=0.8)
-    
-    
-    
-    
     
     while keyboard.is_pressed('q') == False:
 
@@ -56,60 +100,9 @@ def Recruiter():
         elif Conectar:
             #Por si no puede encontrar un conectar real.
                 try:
-                    
-                        print('Conectando con el reclutador...'  )
-                        for i in range(3):
-                            Fun_conectar()
-                        Boton_Enviar = pag.locateOnScreen('assets/imgs/Boton_Enviar.png', confidence=0.8)
-                        Multiple_Choise = pag.locateOnScreen('assets/imgs/multiple_choise.png', confidence=0.8)
-                        Salir_No_Pasar = pag.locateOnScreen('assets/imgs/Salir_No_Pasar.png', confidence=0.8)
-                
-                        #Enviar
-                        if Boton_Enviar:
-                            print('Enviado :D')  
-                            pag.click(Boton_Enviar)
-                            time.sleep(0.5)
-                            Limite_Semanal = pag.locateOnScreen('assets/imgs/Limite_Semanal.png', confidence=0.8)
-
-                            if Limite_Semanal:
-                                print('Haz alcanzado el limite semanal de seguimientos ;)')
-                                msg.showinfo('Terminado', 'Limite Semanal de Interacciones')
-                                break
-                            
-                            else:
-                                pag.scroll(-170)
-                                time.sleep(1)
-
-                        
-
-
-                        #Multiple Choise
-                        elif Multiple_Choise:
-                            print('Resolviendo MultipleChoise...')  
-                            Other_Button = pag.locateOnScreen('assets/imgs/other.png', confidence=0.8)
-                            pag.click(Other_Button)
-                            time.sleep(0.1)
-                            Inside_Conectar = pag.locateOnScreen('assets/imgs/Inside_Conectar_Button.png')
-                            pag.click(Inside_Conectar)
-                            time.sleep(0.1)
-                            Boton_Enviar = pag.locateOnScreen('assets/imgs/Boton_Enviar.png', confidence=0.8)
-                            pag.click(Boton_Enviar)
-                            Ejecutar_Script()
-                            print('Resuleto :D')
-
-                        else:
-                            try:
-                                for i in range(4):
-                                    print('Intentando cambiar de Boton...')
-                                    pag.click(Salir_No_Pasar)
-                                    pag.scroll(-170)
-
-                                    Ejecutar_Script()
-                            except:
-                                pag.scroll(-170)
-                                Boton_Siguente = pag.locateOnScreen('assets/imgs/Boton_Siguiente.png', confidence=0.8)
-                                pag.click(Boton_Siguente)
-                                print('Cambiando de Pagina...')  
+                    print('Conectando con el reclutador...'  )
+                    for i in range(3):
+                        Fun_conectar()              
                 except:
                     pag.scroll(-500)
                     Boton_Siguente = pag.locateOnScreen('assets/imgs/Boton_Siguiente.png', confidence=0.8)
@@ -137,15 +130,3 @@ def Recruiter():
                 break
     if failsafe:
         print('Hemos detenido el programa.')
-
-
-  
-
-
-
-
-
-
-
-
-

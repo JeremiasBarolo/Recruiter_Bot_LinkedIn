@@ -61,7 +61,7 @@ Instalar Python 3.10.4 en adelante (https://www.python.org/downloads/ o Desde el
 
 'pip install time' **(Modulo time)**
 
-'pip install pyautogui' **(Framework)**
+'pip install pyautogui' **(Modulo Bot)**
 
 'pip install keyboard' **(Modulo Keyboard)**
 
@@ -71,4 +71,4 @@ Instalar Python 3.10.4 en adelante (https://www.python.org/downloads/ o Desde el
 
 ## Video de demostracion 🛸
 
-[![recruiter_bot](GitHub "recruiter_bot")](https://user-images.githubusercontent.com/114596118/196282925-a3859a1d-fd96-4cbf-98b7-4a1ad0150776.mp4 "recruiter_bot")
+[![Bot_Recruiter](GitHub "Bot_Recruiter")](https://user-images.githubusercontent.com/114596118/197693139-f4348fbd-5c11-42b4-859e-9dea6595dfe8.mp4 "Bot_Recruiter")
