@@ -16,9 +16,9 @@ def Instrucciones(event):
 def Ejecutar():
     l = msg.askyesno('Iniciando el Programa', 'Desea iniciar el Bot?')
     if l != False:
-        while keyboard.is_pressed('q') == False:
-            Ejecutar_Script()
         print('Iniciando Programa...')
+        Ejecutar_Script()
+        
 
 def Detener_Programa():
     exit()
